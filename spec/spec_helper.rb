@@ -16,30 +16,8 @@
 
 # Selenium Web-driver integration
 require 'selenium-webdriver'
-browser=:chrome
-Capybara.register_driver :selenium do |app|
-if browser == :chrome
-  if ENV['CHROMEDRIVER_BINARY_PATH']
-    #set CHROMEDRIVER_BINARY_PATH=c:\Program Files\chromedriver_win32\chromedriver.exe
-    Selenium::WebDriver::Chrome.driver_path=ENV['CHROMEDRIVER_BINARY_PATH']
-  end
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-else
-  if ENV['FIREFOX_BINARY_PATH']
-    require 'selenium/webdriver'
-    #set FIREFOX_BINARY_PATH=c:\Program Files\Mozilla Firefox\firefox.exe
-    Selenium::WebDriver::Firefox::Binary.path=ENV['FIREFOX_BINARY_PATH']
-  end
-  #http://stackoverflow.com/questions/20009266/selenium-testing-with-geolocate-firefox-keeps-turning-it-off
-  profile = Selenium::WebDriver::Firefox::Profile.new
-  profile["geo.prompt.testing"]=true
-  profile["geo.prompt.testing.allow"]=true
-  Capybara::Selenium::Driver.new(app, :browser=>:firefox, :profile=>profile)
-end
-end
 
 # Capybara integration
-require 'capybara/rails'
 require 'capybara/rspec'
 require 'capybara-screenshot/rspec'
 
@@ -48,12 +26,10 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
-  config.before(:all) do
-    @driver = Selenium::WebDriver.for(:chromedriver,
-                                      :desired_capabilities => capabilities,
-                                      :url => server_url)
-  end
 
+  Capybara.register_driver :selenium do |app|
+    Capybara::Selenium::Driver.new(app, :browser => :chrome, :url => "http://localhost:9515")
+  end
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
@@ -136,7 +112,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  config.after(:all) do
-    @driver.quit
-  end
 end
