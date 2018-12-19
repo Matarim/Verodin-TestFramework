@@ -2,7 +2,7 @@
 
 ## Audience / Assumptions
 This document is written with the expectation that it will be a developer, and instructions are given from the perspective
-of a Mac OS. On other operations systems there is potential for things to vary for execution.
+of a Mac OS. On other operating systems there is potential for things to vary for execution.
 
 ## What I've Done
 For this test suite I&#39;ve added a few gems that I take advantage of when manipulating the browser, and making sure it acts as expected when running through the tests.  Below I will outline key functions commonly used that will assist in further development of this test suite.  At the end of this test suite I will also include documentation and commands if you needed to setup a test suite from scratch in use for other projects.  The sites I have listed are good references if you are having trouble making a selection or manipulating the Web App/Page.
