@@ -59,7 +59,7 @@ To run the test suite open a new command window into the directory of the projec
 
 Below is a breakdown of the different sections of the website that the framework tests. The tests run on Selenium webdriver for visibility.  Ideally for future development tests would be run using a headless browser like the deprecated PhantomJS or HeadlessChrome.  Failures are currently captured with screenshots saved directly into your directory.  In these tests I use Capybara/Rspec because it gives me the flexibility of using gems to aide in E2E tests as well as when built into the project is easily configured for integration tests.
 
-## Tasks tested:
+## Tasks Tested:
 1. Global fields
 2. Menu Content
 3. Sign in link
