@@ -36,9 +36,10 @@ feature 'Create User', :type => :feature do
     click_link('Sign in')
     new_user = page.find("#email_create")
     new_user.click
-
     new_user.send_keys "#{Faker::Internet.safe_email}"
     page.find("#SubmitCreate").click
+    headerText = page.find("#center_column > #noSlide > .page-heading")
+    expect(headerText).to have_text('CREATE AN ACCOUNT')
 
     page.find("#id_gender1").click
     page.find("#customer_firstname").send_keys("#{Faker::Name.first_name}")
