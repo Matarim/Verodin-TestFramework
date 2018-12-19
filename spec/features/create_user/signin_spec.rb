@@ -24,7 +24,8 @@ feature 'Login', :type => :feature do
     existingPass.send_keys("password")
 
     click_button("#SubmitLogin")
-    
+    headerText = page.find("#center_column > .page-heading")
+    expect(headerText).to have_text('MY ACCOUNT')
 
   end
 

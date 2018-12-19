@@ -23,7 +23,15 @@ For this Test Suite I&#39;ve added a few gems that I take advantage of when mani
 
 4. expect(page)
 
-## Faker Cheat Sheet:
+## Faker Cheat Sheet: ([https://devhints.io/ffaker](https://gist.github.com/mikekovacevic/8919216))
+
+1. Faker::Internet.email, .safe_email, .user_name
+
+2. Faker::Lorem.paragraph, .paragraphs, .sentence, .sentences
+
+3. Faker::Name.first_name, .last_name, .name
+
+4. Faker::PhoneNumber.phone_number
 
 ## Test Framework setup:
 
@@ -39,14 +47,14 @@ Below is a breakdown of the different sections of the website that the framework
 
 ## Tasks tested:
 1. Global fields
-1. Menu Content
+2. Menu Content
 3. Sign in link
-2. Creating a new user
-1. Email Validation
-2. Form input
-3. New User sign in
-3. Home page
-1. Landing page
-2. Page Slider options w/ confirmed redirect
-4. Sign in
-1. Existing User
+4. Creating a new user
+5. Email Validation
+6. Form input
+7. New User sign in
+8. Home page
+9. Landing page
+10. Page Slider options w/ confirmed redirect
+11. Sign in
+12. Existing User

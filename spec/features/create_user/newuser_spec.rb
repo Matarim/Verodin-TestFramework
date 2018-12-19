@@ -52,6 +52,8 @@ feature 'Create User', :type => :feature do
     page.find("#postcode").send_keys('25428')
     page.find("#phone_mobile").send_keys('8153470956')
     page.find("#submitAccount").click
+    headerText = page.find("#center_column > .page-heading")
+    expect(headerText).to have_text('MY ACCOUNT')
 
   end
 end
