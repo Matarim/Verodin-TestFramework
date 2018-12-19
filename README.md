@@ -39,7 +39,16 @@ For running this you will need to pull the Repo where you can access it from a c
 
 Another tool that you should have is Bundler.  To install bundler go into the directory for the project in a command window and type: gem install bundler.  After installing bundler run.  Bundle install inside that same command window.
 
-Once everything is installed and you&#39;ve moved into the directory of the project you will need to setup Selenium-Webdriver for chrome.  To do this simply type chromedriver-helper inside the command window.  This will install the chrome driver for Selenium-Webdriver and also start the instance that you will use to host the server instance.
+If starting a new project you would open a command window then change into the directory of that project and then can run the following commands to setup the outline.
+1. rails new
+2. rails generate rspec:init (This makes a spec_helper file instead of the rails_helper. If you are building this test suite inside a project you would use 'install' instead of 'init')
+3. bundle install (Run this every time you would make changes to your gemfile)
+
+Next you need to require gems inside of your spec_helper.  For the project presented I used Capybara, Faker, Rspec, Selenium-Webdriver, Capybara-screenshot, and Chromedriver-helper. You should require the necessary to run before the tests above the "RSpec.configure do |config|" portion inside of spec_helper. 
+
+## Running Test Suite:
+
+Once everything is installed and you&#39;ve moved into the directory of the project you will need to setup Selenium-Webdriver for chrome.  To do this simply type chromedriver-helper inside the command window.  This will install the chrome driver for Selenium-Webdriver, and also start the instance that you will use to host the server instance.
 
 To run the test suite open a new command window into the directory of the project then run: bundle exec rspec.  If you want to be selective of which spec file you run, you can run bundle exec rspec full\_path\_and\_file\_name.
 
