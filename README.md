@@ -44,7 +44,7 @@ If starting a new project you would open a command window then change into the d
 2. rails generate rspec:init (This makes a spec_helper file instead of the rails_helper. If you are building this test suite inside a project you would use 'install' instead of 'init')
 3. bundle install (Run this every time you would make changes to your gemfile)
 
-Next you need to require gems inside of your spec_helper.  For the project presented I used Capybara, Faker, Rspec, Selenium-Webdriver, Capybara-screenshot, and Chromedriver-helper. You should require the necessary to run before the tests above the "RSpec.configure do |config|" portion inside of spec_helper. 
+Next you need to require gems inside of your spec_helper.  For the project presented I used Capybara, Faker, Rspec, Selenium-Webdriver, Capybara-screenshot, and Chromedriver-helper. You should require the necessary to run before the tests above the "RSpec.configure do |config|" portion inside of spec_helper.
 
 ## Running Test Suite:
 
@@ -67,3 +67,7 @@ Below is a breakdown of the different sections of the website that the framework
 10. Page Slider options w/ confirmed redirect
 11. Sign in
 12. Existing User
+
+## Continuing Test Development:
+
+For continuing the test suite development. You would create it blocks either inside of one of the currently created .rb files or you would create a .rb file.  It is important to note that "_spec" needs to be at the end of your file name.
