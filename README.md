@@ -24,7 +24,7 @@ Faker Cheat Sheet:
 
 Test Framework setup:
 
-For running this you will need to pull the Repo where you can access it from a command window. The Repo address is [here](https://github.com/Matarim/Verodin-TestFramework). You will need to have Ruby either globally installed on your machine or inside the directory once you&#39;ve pulled the Repo down.  The link for Ruby is [here](https://www.ruby-lang.org/en/documentation/installation/).
+For running this you will need to pull the Repo where you can access it from a command window. You will need to have Ruby either globally installed on your machine, or inside the directory once you&#39;ve pulled the Repo down.  The link for Ruby is [here](https://www.ruby-lang.org/en/documentation/installation/).
 
 Another tool that you should have is Bundler.  To install bundler go into the directory for the project in a command window and type: gem install bundler.  After installing bundler run.  Bundle install inside that same command window.
 
@@ -36,25 +36,14 @@ Below is a breakdown of the different sections of the website that the framework
 
 Tasks tested:
 1. Global fields
-
 1. Menu Content
-2. Search Field
 3. Sign in link
-4. Home Image
-5. Cart
-
 2. Creating a new user
-
 1. Email Validation
 2. Form input
 3. New User sign in
-
 3. Home page
-
 1. Landing page
 2. Page Slider options w/ confirmed redirect
-3. Add to cart
-
 4. Sign in
-
 1. Existing User
