@@ -13,7 +13,7 @@ feature 'Login', :type => :feature do
     visit 'http://automationpractice.com/'
   end
 
-  it 'Confirm Page Exists', js: true do
+  it 'Sign in as existing user', js: true do
     click_link('Sign in')
 
     existingUser = page.find("#email")

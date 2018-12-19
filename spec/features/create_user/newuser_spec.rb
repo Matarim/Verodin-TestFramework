@@ -14,7 +14,7 @@ feature 'Create User', :type => :feature do
 
   end
 
-  it 'Confirm Page Exists', js: true do
+  it 'Confirm Sign In Page exists', js: true do
     click_link('Sign in')
     pageVerification = page.find("#center_column > .page-heading")
     expect(pageVerification).to have_text('AUTHENTICATION')
