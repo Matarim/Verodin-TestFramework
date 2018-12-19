@@ -70,4 +70,6 @@ Below is a breakdown of the different sections of the website that the framework
 
 ## Continuing Test Development:
 
-For continuing the test suite development. You would create it blocks either inside of one of the currently created .rb files or you would create a .rb file.  It is important to note that "_spec" needs to be at the end of your file name.
+For continuing the test suite development. You would create it blocks either inside of one of the currently created .rb files or you would create a .rb file.  It is important to note that "_spec" needs to be at the end of your file name. After creating either your new .rb file or setting up an it block inside of one that is currently created you can begin to start making selections on the Web page/app. The tests that are currently developed should pose as a good outline for selecting different components throughout the app.
+
+If you create your own .rb file it is important to wrap your it blocks inside of a feature block, and include the require spec_helper above. Also an important note the before :each block should be included for statements you need to run at the beginning of every test.  In the example I have it using visit "(http://automationpractice.com/)". Using the cheat sheets listed above will also help you find a wider variety of selectors and expect statements that can be used to increase coverage.
