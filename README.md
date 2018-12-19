@@ -23,7 +23,7 @@ For this Test Suite I&#39;ve added a few gems that I take advantage of when mani
 
 4. expect(page)
 
-## Faker Cheat Sheet: ([https://devhints.io/ffaker](https://gist.github.com/mikekovacevic/8919216))
+## Faker Cheat Sheet: ([https://devhints.io/ffaker](https://devhints.io/ffaker),[https://gist.github.com/mikekovacevic/8919216](https://gist.github.com/mikekovacevic/8919216))
 
 1. Faker::Internet.email, .safe_email, .user_name
 
