@@ -20,6 +20,8 @@ require 'selenium-webdriver'
 # Capybara integration
 require 'capybara/rspec'
 require 'capybara-screenshot/rspec'
+require 'faker'
+
 
 
 RSpec.configure do |config|

@@ -16,15 +16,16 @@ feature 'Login', :type => :feature do
   it 'Confirm Page Exists', js: true do
     click_link('Sign in')
 
-  end
+    existingUser = page.find("#email")
+    existingUser.click
+    existingUser.send_keys('testemail@verodin.com')
+    existingPass = page.find("passwd")
+    existingPass.click
+    existingPass.send_keys("password")
 
-  it 'Customers tab adding then clicking clients list', js: true do
-    click_link('Sign in')
-
-  end
-
-  it 'Adding Customer then clicking save with nothing filled in', js: true do
-    click_link('Sign in')
+    click_button("#SubmitLogin")
     
+
   end
+
 end

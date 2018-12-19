@@ -22,7 +22,6 @@ feature 'Create User', :type => :feature do
   end
 
   it 'Confirm Validation Error for Email field', js: true do
-    #SpecSupportHelpers::SignInLink.click_sign_in
     click_link('Sign in')
     new_user = page.find("#email_create")
     new_user.click
@@ -38,18 +37,20 @@ feature 'Create User', :type => :feature do
     new_user = page.find("#email_create")
     new_user.click
 
-    new_user.send_keys 'testemail@verodin.com'
-
+    new_user.send_keys "#{Faker::Internet.safe_email}"
     page.find("#SubmitCreate").click
 
-    page.find('#id_gender1').click
-    page.find('#customer_firstname').send_keys('Matthew')
-    page.find('#customer_lastname').send_keys('Rampey')
-    page.find('#email').send_keys('testemail@verodin.com')
-    page.find('#passwd').send_keys('passW0rd')
-    page.find
-    page.find
-    page.find
+    page.find("#id_gender1").click
+    page.find("#customer_firstname").send_keys("#{Faker::Name.first_name}")
+    page.find("#customer_lastname").send_keys("#{Faker::Name.last_name}")
+    page.find("#passwd").send_keys("#{Faker::Internet.password}")
+    page.find("#address1").send_keys('152 Bronte Ave')
+    page.find("#city").send_keys('Inwood')
+    stateSelect = page.find("#uniform-id_state").click
+    stateSelect.find(:option, 'West Virginia').select_option
+    page.find("#postcode").send_keys('25428')
+    page.find("#phone_mobile").send_keys('8153470956')
+    page.find("#submitAccount").click
 
   end
 end
