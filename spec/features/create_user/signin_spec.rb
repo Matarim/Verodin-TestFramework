@@ -19,11 +19,11 @@ feature 'Login', :type => :feature do
     existingUser = page.find("#email")
     existingUser.click
     existingUser.send_keys('testemail@verodin.com')
-    existingPass = page.find("passwd")
+    existingPass = page.find("#passwd")
     existingPass.click
     existingPass.send_keys("password")
 
-    click_button("#SubmitLogin")
+    click_button("Sign in")
     headerText = page.find("#center_column > .page-heading")
     expect(headerText).to have_text('MY ACCOUNT')
 
