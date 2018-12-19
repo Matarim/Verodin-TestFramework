@@ -1,6 +1,11 @@
 # README
 
-For this Test Suite I&#39;ve added a few gems that I take advantage of when manipulating the browser, and making sure it acts as expected when running through the tests.  Below I will outline Key functions commonly used that will assist in further development of this Test Suite.  At the end of this Test Suite I will also include documentation and commands if you needed to setup a Test Suite from scratch in use for other projects.  The sites I have listed are good references if you are having trouble making a selection or manipulating the Web App/Page.
+## Audience / Assumptions
+This document is written with the expectation that it will be a developer, and instructions are given from the perspective
+of a Mac OS. On other operations systems there is potential for things to vary for execution.
+
+## What I've Done
+For this test suite I&#39;ve added a few gems that I take advantage of when manipulating the browser, and making sure it acts as expected when running through the tests.  Below I will outline key functions commonly used that will assist in further development of this test suite.  At the end of this test suite I will also include documentation and commands if you needed to setup a test suite from scratch in use for other projects.  The sites I have listed are good references if you are having trouble making a selection or manipulating the Web App/Page.
 
 ## Capybara Cheat Sheet: ([https://devhints.io/capybara](https://devhints.io/capybara), [http://cheatrags.com/capybara](http://cheatrags.com/capybara))
 1. click\_link(&quot;ID, Name, Class, Title etc…&quot;)
@@ -33,7 +38,7 @@ For this Test Suite I&#39;ve added a few gems that I take advantage of when mani
 
 4. Faker::PhoneNumber.phone_number
 
-## Test Framework setup:
+## Test Framework Setup:
 
 For running this you will need to pull the Repo where you can access it from a command window. You will need to have Ruby either globally installed on your machine, or inside the directory once you&#39;ve pulled the Repo down.  The link for Ruby is [here](https://www.ruby-lang.org/en/documentation/installation/).
 
@@ -74,4 +79,4 @@ For continuing the test suite development. You would create it blocks either ins
 
 If you create your own .rb file it is important to wrap your it blocks inside of a feature block, and include the require spec_helper above. Also an important note the before :each block should be included for statements you need to run at the beginning of every test.  In the example I have it using visit "http://automationpractice.com/". Using the cheat sheets listed above will also help you find a wider variety of selectors and expect statements that can be used to increase coverage.
 
-One final note it is important to include js: inside of your it blocks for Capybara to work properly. 
+One final note it is important to include js: inside of your it blocks for Capybara to work properly.
