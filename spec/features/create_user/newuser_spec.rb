@@ -36,6 +36,7 @@ feature 'Create User', :type => :feature do
     click_link('Sign in')
     new_user = page.find("#email_create")
     new_user.click
+    # Using Faker to generate email, names, passwords etc.. helps prevent redundancy
     new_user.send_keys "#{Faker::Internet.safe_email}"
     page.find("#SubmitCreate").click
     headerText = page.find("#center_column > #noSlide > .page-heading")

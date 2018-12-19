@@ -15,6 +15,7 @@ feature 'Visit Home Page', :type => :feature do
     #Looks for specific field that will contain text that wouldn't be expected to change.
     #This test is included, it will aide in stopping the tests once we switch to headless browser
     #helping determine that the tests are failing due to page not being located.
+    #Inside the variable you will see > this is used when attempting to select an ID, Class etc.. that is buried.
     pageConfirmation = page.find("#editorial_block_center > #editorial_image_legend")
     expect(pageConfirmation).to have_text('Subsidiary of seleniumframework.com')
 
@@ -34,6 +35,7 @@ feature 'Visit Home Page', :type => :feature do
   end
 
   it 'Click the shop now link', js: true do
+    #This makes sure to select the first option.  Can be used when duplicate ID's, Class's are present.
     first(:button, 'Shop now !').click()
     expect(page).to have_text("PrestaShop")
   end
