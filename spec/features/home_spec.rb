@@ -45,4 +45,17 @@ feature 'Visit Home Page', :type => :feature do
     cartHeader = page.find("#center_column > #cart_title")
     expect(cartHeader).to have_text('SHOPPING-CART SUMMARY')
   end
+
+  it 'Click Best Sellers Link', js: true do
+    click_button('Best Sellers')
+    cartHeader = page.find(".product-name")
+    expect(cartHeader).to have_text('Printed Chiffon Dress')
+  end
+
+  it 'Click About Us In Footer', js: true do
+    click_link('About us')
+    cartHeader = page.find(".cms-block > .page-subheading")
+    expect(cartHeader).to have_text('Company')
+  end
+
 end
